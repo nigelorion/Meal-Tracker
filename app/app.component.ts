@@ -7,6 +7,7 @@ import { Meal } from './meal.model';
     <div class="main">
       <h1>Current Meals:</h1>
       <button (click)="newMeal()">Add New Meal!</button>
+      <new-meal *ngIf="newMealForm" (newMealSender)="addMeal($event)"></new-meal>
       <meal-list [childMealList]="meals"></meal-list>
     </div>
   `
@@ -20,8 +21,19 @@ export class AppComponent {
     new Meal('Beer', 'Just good old PBR', '300')
   ];
 
-  newMeal() {
+  newMealForm = null;
 
+  editMealForm = null;
+
+  newMeal() {
+    this.newMealForm = true;
   }
+
+  addMeal(newMeal: Meal) {
+    this.meals.push(newMeal);
+    this.newMealForm = null;
+  }
+
+
 
 }
