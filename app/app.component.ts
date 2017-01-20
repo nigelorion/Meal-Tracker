@@ -5,18 +5,23 @@ import { Meal } from './meal.model';
   selector: 'my-app',
   template: `
     <div class="main">
-      <div class="main__list">
-      <p>Testing testing testing</p>
-      <p>Meal list test</p>
-      </div>
+      <h1>Current Meals:</h1>
+      <button (click)="newMeal()">Add New Meal!</button>
+      <meal-list [childMealList]="meals"></meal-list>
     </div>
   `
 })
 
 export class AppComponent {
 
-  meal: Meal[] = [
-    new Meal('Rice', 'Just plain white rice with nothing on it', '250')
+  meals: Meal[] = [
+    new Meal('Rice', 'Just plain white rice with nothing on it', '250'),
+    new Meal('Kale', 'Just plain Kale with nothing on it', '100'),
+    new Meal('Beer', 'Just good old PBR', '300')
   ];
+
+  newMeal() {
+
+  }
 
 }
