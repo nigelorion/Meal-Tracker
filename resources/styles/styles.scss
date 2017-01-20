@@ -1,0 +1,48 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  &__item {
+    width: 260px;
+    height: 260px;
+    border: solid 5px rgb(106, 14, 60);
+    margin: 3%;
+    padding: 3%;
+    transition: all 160ms;
+    &:hover {
+      transform: scale(1.1);
+      border: solid 1px rgb(117, 67, 92);
+      background-color: rgba(199, 242, 250, 0.19);
+    }
+    &__description {
+      opacity: 0;
+      transition: all 300ms;
+    }
+    &:hover .list__item__description {
+      opacity: 1;
+    }
+    button {
+      opacity: 0;
+      transition: all 300ms ease-in-out;
+      border: none;
+      &:hover {
+        background-color: rgb(38, 158, 185);
+      }
+    }
+    &:hover button {
+      opacity: 1;
+    }
+  }
+}
+
+.select {
+  margin: 0 auto;
+}

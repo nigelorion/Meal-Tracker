@@ -19,6 +19,12 @@ export class AppComponent {
   meals: Meal[] = [
     new Meal('Rice', 'Just plain white rice with nothing on it', 250),
     new Meal('Kale', 'Just plain Kale with nothing on it', 100),
+    new Meal('Beer', 'Just good old PBR', 300),
+    new Meal('Rice', 'Just plain white rice with nothing on it', 250),
+    new Meal('Kale', 'Just plain Kale with nothing on it', 100),
+    new Meal('Beer', 'Just good old PBR', 300),
+    new Meal('Rice', 'Just plain white rice with nothing on it', 250),
+    new Meal('Kale', 'Just plain Kale with nothing on it', 100),
     new Meal('Beer', 'Just good old PBR', 300)
   ];
 
