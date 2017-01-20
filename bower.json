@@ -1,7 +1,10 @@
 {
   "name": "meal-tracker",
-  "description": "Angular 2 Solo Project",
+  "description": "",
   "main": "",
+  "authors": [
+    "Nigel Burnett <nigelorion@gmail.com>"
+  ],
   "license": "ISC",
   "homepage": "",
   "ignore": [
@@ -10,5 +13,8 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
 }
