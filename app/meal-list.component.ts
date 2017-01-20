@@ -10,6 +10,7 @@ import { Meal } from './meal.model'
         <h3>{{meal.food}}</h3>
         <p>{{meal.description}}</p>
         <p>{{meal.calories}}</p>
+        <button type="button" (click)="editMeal(meal)">Edit</button>
       </div>
     </div>
     `
@@ -18,5 +19,10 @@ import { Meal } from './meal.model'
 export class MealListComponent {
 
   @Input() childMealList: Meal[];
+  @Output() editSender = new EventEmitter;
+
+  editMeal(meal: Meal) {
+    this.editSender.emit(meal);
+  }
 
 }
