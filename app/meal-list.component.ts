@@ -16,7 +16,7 @@ import { Meal } from './meal.model'
       <div class="list__item" *ngFor="let meal of childMealList | calories:filter">
         <h3>{{meal.food}}</h3>
         <p class="list__item__description">{{meal.description}}</p>
-        <p>{{meal.calories}}</p>
+        <p class="list__item__calories">Calories: <strong>{{meal.calories}}</strong></p>
         <button type="button" (click)="editMeal(meal)">Edit</button>
       </div>
     </div>
